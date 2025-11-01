@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+/* Light mode (default) */
+:root{
+  --primary-color: #CEA7E0;
+  --secondary-color: #f9fafb;
+  --tertiary-color: #f3f4f6;
+  --text-color: #111827;
+  --border-color: #e5e7eb;
+}
+
+/* Dark mode */
+.dark{
+  --primary-color: #09090B;
+  --secondary-color: #141319;
+  --tertiary-color: #17171C;
+  --text-color: #ffffff;
+  --border-color: #374151;
+}
+
+/* Apply theme colors */
+body{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sp-text{
+  background: conic-gradient(
+    at top,
+    #c084fc,  /* purple-400 */
+    #a855f7   /* purple-500 */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.icon{
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon:hover{
+  background-color: var(--tertiary-color);
+  transform: translateY(-2px);
+}
+
+/* Light mode specific icon styling */
+:root .icon{
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+:root .icon:hover{
+  background-color: #e5e7eb;
+}
+
+/* Dark mode specific icon styling */
+.dark .icon{
+  background-color: #141319;
+  border-color: #374151;
+}
+
+.dark .icon:hover{
+  background-color: #1f1f23;
+}
